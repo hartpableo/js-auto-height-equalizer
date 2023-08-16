@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+
+  <!-- Bootstrap for quick styling only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+  <style>
+    .card {
+      display: inline-block;
+      vertical-align: top;
+      margin: .25em;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <div
+      class="card" 
+      style="width: 18rem;"
+      data-equal-height="hi"
+    >
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle">Height of this element</h6>
+        <p class="card-text">Some</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+    <div
+      class="card" 
+      style="width: 18rem;"
+      data-equal-height="foo"
+    >
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle">Height of this element</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+    <div
+      class="card" 
+      style="width: 18rem;"
+      data-equal-height="hello"
+    >
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle">Height of this element</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+    <div
+      class="card" 
+      style="width: 18rem;"
+      data-equal-height="foo"
+    >
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle">Height of this element</h6>
+        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nostrum fugit consequatur maiores! Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, ad? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, porro?</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+    <div
+      class="card" 
+      style="width: 18rem;"
+      data-equal-height="bar"
+    >
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle">Height of this element</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, blanditiis aliquam repellendus dolores, error itaque facilis ex quas repellat excepturi dolorem tenetur iure recusandae veniam! Blanditiis ipsam eligendi amet, at quisquam repellendus unde, doloribus aut placeat asperiores quas modi. Voluptatem soluta amet veniam aspernatur? Natus, aspernatur. Aut delectus vero error.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+    <div
+      class="card" 
+      style="width: 18rem;"
+      data-equal-height="hello"
+    >
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle">Height of this element</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+    <div
+      class="card" 
+      style="width: 18rem;"
+      data-equal-height="bar"
+    >
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle">Height of this element</h6>
+        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur similique sed quisquam aspernatur aperiam? Voluptatum earum molestiae mollitia eos vel! Ut nisi nam laudantium quam.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+    <div
+      class="card" 
+      style="width: 18rem;"
+      data-equal-height="hello"
+    >
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle">Height of this element</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content. Lorem ipsum dolor sit amet.ipisicing elit. Fugit saepe perferendis incidunt consectetur quas necessitatibus atque eveniet adipisci id ipsum molestiae, veniam accusantium beatae itaque in inventore quibusdam, corporis doloremque?</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+
+  <!-- This script is for demo purposes only. -->
+  <script>
+    let arr = document.querySelectorAll('[data-equal-height]');
+    document.addEventListener('DOMContentLoaded', () => {
+      arr.forEach(item => {
+        item.querySelector('.card-title').textContent = `Group: ${item.dataset.equalHeight}`;
+        item.querySelector('.card-subtitle').textContent = `Group: ${item.offsetHeight}`;
+      });
+    })
+  </script>
+</body>
+</html>
